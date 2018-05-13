@@ -1,0 +1,70 @@
+﻿{% extends 'layout/layout1.html' %}
+
+{% block title %} Instruments Page {% endblock %}
+
+{% block content %}
+
+<h1> Instruments Page  </h1>
+
+<nav>
+    <ul class="nav justify-content-end nav-tabs ">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+    </ul>
+</nav>
+
+<p>
+    <table class="table table table-sm table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Instument</th>
+                <th scope="col">Description</th>
+                <th scope="col">Condition</th>
+                <th scope="col">Hired</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for instrument in data %}
+            <tr>
+                <td>{{instrument.name}}</td>
+                <td>{{instrument.description}}</td>
+                <td>{{instrument.condition}}</td>
+                <td>{{instrument.hired}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+</table>
+
+{{data.name}}<br /> <!-- just get one item --> 
+</p>
+
+{% endblock %}
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instruments Page</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Instruments Page</h1>
+</body>
+</html>
+-->

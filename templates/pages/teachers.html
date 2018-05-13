@@ -1,0 +1,41 @@
+﻿{% extends 'layout/layout1.html' %}
+
+{% block title %} Teachers Page {% endblock %}
+
+{% block content %}
+
+<h1> Teachers Page  </h1>
+
+<nav>
+    <ul class="nav justify-content-end nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+    </ul>
+</nav>
+
+
+<p>
+    {% for teacher in data %}
+        {{teacher.first_name}} {{teacher.last_name}} {{teacher.qualifications}} {{teacher.phone_number}} {{teacher.email_address}}  <br>
+    {% endfor %}
+
+</p>
+
+
+{% endblock %}

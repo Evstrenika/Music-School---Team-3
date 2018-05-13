@@ -1,0 +1,39 @@
+﻿{% extends 'layout/layout1.html' %}
+
+{% block title %} Students {% endblock %}
+
+{% block content %}
+
+<h1> Students  </h1>
+
+<nav>
+    <ul class="nav justify-content-end nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+    </ul>
+</nav>
+
+<p>
+{% for student in data %}
+     {{student.first_name}} {{student.last_name}} {{student.address}} {{student.phone_number}} {{student.email_address}}  <br>
+{% endfor %}
+
+</p>
+
+{% endblock %}

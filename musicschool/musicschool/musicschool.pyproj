@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>musicschool</Name>
+    <RootNamespace>musicschool</RootNamespace>
+    <InterpreterId>{0bf9abe4-5b4f-47bb-8ac3-6f89aaf6efb9}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>70c306eb-4833-46b4-aad0-dfa4c71a9805</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>musicschool.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="contracts\admin.py" />
+    <Compile Include="contracts\apps.py" />
+    <Compile Include="contracts\migrations\__init__.py" />
+    <Compile Include="contracts\models.py" />
+    <Compile Include="contracts\tests.py" />
+    <Compile Include="contracts\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="contracts\views.py" />
+    <Compile Include="contracts\__init__.py" />
+    <Compile Include="feedback\admin.py" />
+    <Compile Include="feedback\apps.py" />
+    <Compile Include="feedback\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="feedback\migrations\__init__.py" />
+    <Compile Include="feedback\models.py" />
+    <Compile Include="feedback\tests.py" />
+    <Compile Include="feedback\views.py" />
+    <Compile Include="feedback\__init__.py" />
+    <Compile Include="instruments\admin.py" />
+    <Compile Include="instruments\apps.py" />
+    <Compile Include="instruments\migrations\__init__.py" />
+    <Compile Include="instruments\models.py" />
+    <Compile Include="instruments\tests.py" />
+    <Compile Include="instruments\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="instruments\views.py" />
+    <Compile Include="instruments\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="musicschool\__init__.py" />
+    <Compile Include="musicschool\settings.py" />
+    <Compile Include="musicschool\urls.py" />
+    <Compile Include="musicschool\wsgi.py" />
+    <Compile Include="parents\admin.py" />
+    <Compile Include="parents\apps.py" />
+    <Compile Include="parents\migrations\__init__.py" />
+    <Compile Include="parents\models.py" />
+    <Compile Include="parents\tests.py" />
+    <Compile Include="parents\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="parents\views.py" />
+    <Compile Include="parents\__init__.py" />
+    <Compile Include="payment\admin.py" />
+    <Compile Include="payment\apps.py" />
+    <Compile Include="payment\migrations\__init__.py" />
+    <Compile Include="payment\models.py" />
+    <Compile Include="payment\tests.py" />
+    <Compile Include="payment\views.py" />
+    <Compile Include="payment\__init__.py" />
+    <Compile Include="preferences\admin.py" />
+    <Compile Include="preferences\apps.py" />
+    <Compile Include="preferences\migrations\__init__.py" />
+    <Compile Include="preferences\models.py" />
+    <Compile Include="preferences\tests.py" />
+    <Compile Include="preferences\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="preferences\views.py" />
+    <Compile Include="preferences\__init__.py" />
+    <Compile Include="skills\admin.py" />
+    <Compile Include="skills\apps.py" />
+    <Compile Include="skills\migrations\__init__.py" />
+    <Compile Include="skills\models.py" />
+    <Compile Include="skills\tests.py" />
+    <Compile Include="skills\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="skills\views.py" />
+    <Compile Include="skills\__init__.py" />
+    <Compile Include="students\admin.py" />
+    <Compile Include="students\apps.py" />
+    <Compile Include="students\migrations\__init__.py" />
+    <Compile Include="students\models.py" />
+    <Compile Include="students\tests.py" />
+    <Compile Include="students\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="students\views.py" />
+    <Compile Include="students\__init__.py" />
+    <Compile Include="teachers\admin.py" />
+    <Compile Include="teachers\apps.py" />
+    <Compile Include="teachers\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="teachers\migrations\__init__.py" />
+    <Compile Include="teachers\models.py" />
+    <Compile Include="teachers\tests.py" />
+    <Compile Include="teachers\views.py" />
+    <Compile Include="teachers\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="contracts\" />
+    <Folder Include="contracts\migrations\" />
+    <Folder Include="feedback\" />
+    <Folder Include="feedback\migrations\" />
+    <Folder Include="instruments\" />
+    <Folder Include="instruments\migrations\" />
+    <Folder Include="musicschool\" />
+    <Folder Include="parents\" />
+    <Folder Include="parents\migrations\" />
+    <Folder Include="payment\" />
+    <Folder Include="payment\migrations\" />
+    <Folder Include="preferences\" />
+    <Folder Include="preferences\migrations\" />
+    <Folder Include="skills\" />
+    <Folder Include="skills\migrations\" />
+    <Folder Include="students\" />
+    <Folder Include="students\migrations\" />
+    <Folder Include="teachers\" />
+    <Folder Include="teachers\migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>{0bf9abe4-5b4f-47bb-8ac3-6f89aaf6efb9}</Id>
+      <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
+      <Version>3.5</Version>
+      <Description>env (Python 3.5)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
