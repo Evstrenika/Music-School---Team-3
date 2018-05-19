@@ -2,31 +2,17 @@
 
 {% block title %} Skill {% endblock %}
 
-{% block content %}
+    {% block head %}
+<title>---</title>
+    {% endblock %}
 
-<h1>  Skills  </h1>
+    {% block header %}
+<h1>---</h1>
+    {% endblock %}
 
-<nav>
-    <ul class="nav justify-content-end nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-    </ul>
-</nav>
+    {% block content %}
+<!-- will overwrite -->
+    {% endblock %}
 
-{% endblock %}
+
+

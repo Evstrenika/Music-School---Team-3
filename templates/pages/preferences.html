@@ -1,32 +1,18 @@
-﻿{% extends 'layout/layout1.html' %}
+﻿% extends 'layout/layout1.html' %}
 
-{% block title %} Preference {% endblock %}
+{% block title %} Preferences {% endblock %}
 
-{% block content %}
+    {% block head %}
+<title>Preferences</title>
+    {% endblock %}
 
-<h1>  Preference  </h1>
+    {% block header %}
+<h1>Preferences</h1>
+    {% endblock %}
 
-<nav>
-    <ul class="nav justify-content-end nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-    </ul>
-</nav>
+    {% block content %}
+<!-- will overwrite -->
+    {% endblock %}
 
-{% endblock %}
+
+

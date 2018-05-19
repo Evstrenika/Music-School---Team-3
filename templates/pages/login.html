@@ -1,0 +1,25 @@
+﻿{% extends 'layout/layout2.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block header %}
+<h1 class="container"> Students and Teachers  </h1>
+{%endblock%}
+
+{% block content %}
+
+<div class="container">
+
+    <p>
+        <br />
+        Please login here: 
+    </p>
+
+    <form method="post">
+            {% csrf_token %} <!-- csrf in django -->
+            {{ form.as_p}} <!-- form element done-->
+        <button class="btn btn-primary" type="submit"> Login   </button>
+    </form>
+</div>
+
+{% endblock %}
