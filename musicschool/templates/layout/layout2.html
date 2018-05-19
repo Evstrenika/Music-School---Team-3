@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!-- not working -->
+    <!-- {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/style.css' %}" type="text/css">-->
+</head>
+
+
+<body class="container">
+
+    <div class="jumbotron">
+
+        <div class="container">
+            {% block header %}
+            <h1>---</h1>
+            {% endblock %}
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        </div>
+    </div>
+
+
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Student Application</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Instrument Hire</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+
+    {% endblock %}
+     
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿{% extends 'layout/layout2.html' %}
+
+{% block title %} Teachers Page {% endblock %}
+
+{% block content %}
+
+<h1> Teachers Page  </h1>
+
+<p>
+    {% for teacher in data %}
+        {{teacher.first_name}} {{teacher.last_name}} {{teacher.qualifications}} {{teacher.phone_number}} {{teacher.email_address}}  <br>
+    {% endfor %}
+
+</p>
+
+
+{% endblock %}

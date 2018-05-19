@@ -1,0 +1,49 @@
+﻿{% extends 'layout/layout2.html' %}
+
+{% block title %} Instruments Page {% endblock %}
+
+{% block header %}
+<h1> Instruments Hire Page  </h1>
+{%endblock%}
+
+{% block content %}
+
+<div class="container">
+    <table class="table table table-sm table-hover class="container"">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Instument</th>
+                <th scope="col">Description</th>
+                <th scope="col">Condition</th>
+                <th scope="col">Hired</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for instrument in data %}
+            <tr>
+                <td>{{instrument.name}}</td>
+                <td>{{instrument.description}}</td>
+                <td>{{instrument.condition}}</td>
+                <td>{{instrument.hired}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{{data.name}}<br /> <!-- just get one item --> 
+
+{% endblock %}
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instruments Page</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Instruments Page</h1>
+</body>
+</html>
+-->
