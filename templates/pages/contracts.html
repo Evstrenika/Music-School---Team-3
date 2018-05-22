@@ -1,10 +1,18 @@
-﻿{% extends 'layout/layout1.html' %}
+﻿{% extends 'layout/layout2.html' %}
 
-{% block title %} Contracts {% endblock %}
+{% block title %}Contracts{% endblock %}
 
-{% block content %}
+    {% block head %}
+<title>Contracts</title>
+    {% endblock %}
 
-<h1>  Contracts  </h1>
+    {% block header %}
+<h1>Contracts</h1>
+    {% endblock %}
 
-{% endblock %}
+    {% block content %}
+<!-- will overwrite -->
+    {% endblock %}
+
+
 

@@ -1,17 +1,15 @@
 ﻿{% extends 'layout/layout2.html' %}
 
-{% block title %} Teachers Page {% endblock %}
+{% block title %}Teachers{% endblock %}
 
-{% block content %}
+    {% block head %}
+<title>Teachers</title>
+    {% endblock %}
 
-<h1> Teachers Page  </h1>
+    {% block header %}
+<h1>Teachers</h1>
+    {% endblock %}
 
-<p>
-    {% for teacher in data %}
-        {{teacher.first_name}} {{teacher.last_name}} {{teacher.qualifications}} {{teacher.phone_number}} {{teacher.email_address}}  <br>
-    {% endfor %}
-
-</p>
-
-
-{% endblock %}
+    {% block content %}
+<!-- will overwrite -->
+    {% endblock %}

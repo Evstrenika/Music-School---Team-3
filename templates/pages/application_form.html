@@ -1,0 +1,19 @@
+﻿{% extends 'layout/layout2.html' %}
+
+{% block title %} Student Application {% endblock %}
+
+{% block header %}
+<h1> Student Application </h1>
+{%endblock%}
+
+{% block content %}
+
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button class="btn btn-primary" type="submit"> Submit </button>
+    </form>
+</div>
+
+{% endblock %}

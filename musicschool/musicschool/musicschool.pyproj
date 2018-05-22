@@ -30,6 +30,17 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="accounts\admin.py" />
+    <Compile Include="accounts\apps.py" />
+    <Compile Include="accounts\forms.py" />
+    <Compile Include="accounts\migrations\__init__.py" />
+    <Compile Include="accounts\models.py" />
+    <Compile Include="accounts\tests.py" />
+    <Compile Include="accounts\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="accounts\views.py" />
+    <Compile Include="accounts\__init__.py" />
     <Compile Include="contracts\admin.py" />
     <Compile Include="contracts\apps.py" />
     <Compile Include="contracts\migrations\__init__.py" />
@@ -61,6 +72,9 @@
     <Compile Include="instruments\views.py" />
     <Compile Include="instruments\__init__.py" />
     <Compile Include="manage.py" />
+    <Compile Include="musicschool\views.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="musicschool\__init__.py" />
     <Compile Include="musicschool\settings.py" />
     <Compile Include="musicschool\urls.py" />
@@ -127,6 +141,8 @@
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="accounts\" />
+    <Folder Include="accounts\migrations\" />
     <Folder Include="contracts\" />
     <Folder Include="contracts\migrations\" />
     <Folder Include="feedback\" />
@@ -142,6 +158,8 @@
     <Folder Include="preferences\migrations\" />
     <Folder Include="skills\" />
     <Folder Include="skills\migrations\" />
+    <Folder Include="static\" />
+    <Folder Include="static\accounts\" />
     <Folder Include="students\" />
     <Folder Include="students\migrations\" />
     <Folder Include="teachers\" />

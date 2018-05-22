@@ -6,13 +6,9 @@
 <h1 class="container"> Students Page </h1>
 {%endblock%}
 
-{% block content %}
-
 <p>
     {% for student in data %}
     {{student.first_name}} {{student.last_name}} {{student.address}} {{student.phone_number}} {{student.email_address}}  <br>
     {% endfor %}
 
 </p>
-
-{% endblock %}

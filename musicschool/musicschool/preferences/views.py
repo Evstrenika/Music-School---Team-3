@@ -4,5 +4,5 @@ from preferences.models import Preferences
 
 def preferences(request):
     data = Preferences.objects.all()
-    return TemplateResponse(request,'pages/prefereces.html', {"data" : data})
+    return TemplateResponse(request,'pages/preferences.html', {"data" : data})
 

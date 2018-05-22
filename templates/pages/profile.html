@@ -1,18 +1,16 @@
 ﻿{% extends 'layout/layout3.html' %}
 
-{% block title %} Home {% endblock %}
+{% block title %} Your Profile {% endblock %}
 
     {% block head %}
-    <title>Home</title>
+<title>Home</title>
     {% endblock %}
-    
+
     {% block header %}
-    <h1>Music Home Page</h1>
+<h1>Your Home page</h1>
     {% endblock %}
-   
+
     {% block content %}
-    <!-- will overwrite -->
+<p> Hello {{user.first_name}} {{user.last_name}}</p>
     {% endblock %}
-
-
 
