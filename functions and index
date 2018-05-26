@@ -1,0 +1,17 @@
+create index username_idx on auth_user(first_name);
+
+create or replace function total_users()
+returns integer as $total_users$
+declare
+total_users integer;
+begin
+select count(*) into total_users from auth_user;
+return total_users;
+end;
+$total_users$ language plpgsql;
+
+create function get_all_users()
+returns setof auth_user 
+as 'select * from auth_user;' language 'sql';
+
+select get_all_users(), total_users()
