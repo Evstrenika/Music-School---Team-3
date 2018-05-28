@@ -1,0 +1,22 @@
+diff a/musicschool/musicschool/musicschool.pyproj b/musicschool/musicschool/musicschool.pyproj	(rejected hunks)
+@@ -118,12 +118,17 @@
+     <Compile Include="skills\__init__.py" />
+     <Compile Include="students\admin.py" />
+     <Compile Include="students\apps.py" />
++    <Compile Include="students\migrations\0001_initial.py" />
++    <Compile Include="students\migrations\0002_auto_20180422_0727.py" />
++    <Compile Include="students\migrations\0003_auto_20180424_0716.py" />
++    <Compile Include="students\migrations\0004_auto_20180520_1439.py" />
++    <Compile Include="students\migrations\0005_auto_20180520_1443.py" />
++    <Compile Include="students\migrations\0006_auto_20180520_1508.py" />
++    <Compile Include="students\migrations\0007_auto_20180521_2058.py" />
+     <Compile Include="students\migrations\__init__.py" />
+     <Compile Include="students\models.py" />
+     <Compile Include="students\tests.py" />
+-    <Compile Include="students\urls.py">
+-      <SubType>Code</SubType>
+-    </Compile>
++    <Compile Include="students\urls.py" />
+     <Compile Include="students\views.py" />
+     <Compile Include="students\__init__.py" />
+     <Compile Include="teachers\admin.py" />

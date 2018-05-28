@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+
 
 class ApplicationForm(UserCreationForm):
     first_name = forms.CharField(required=True)
@@ -27,3 +28,26 @@ class ApplicationForm(UserCreationForm):
             user.save()
 
         return user
+
+
+class TeacherForm(forms.Form):
+    first_name = forms.CharField(required=True)
+    last_name = forms.CharField(required=True)
+    date_of_birth = forms.DateField(required=True)
+    qualifications = forms.CharField(widget=forms.Textarea())
+    email_address = forms.EmailField(required=True)
+    phone_number = forms.CharField(required=True)
+    facebook = forms.CharField()
+
+class EditProfileForm(UserChangeForm): # exclude from form
+    
+    class Meta:
+        model = User
+        fields = (
+            'first_name',
+            'email',
+            'last_name',
+            'password'
+            )
+        exclude = (
+            ) 
