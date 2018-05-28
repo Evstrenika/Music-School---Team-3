@@ -31,6 +31,12 @@ ALLOWED_HOSTS = []
 
 #ACCOUNT_ACTIVATION_DAYS = 7 
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'testdevelopmentuser1@gmail.com' 
+EMAIL_HOST_PASSWORD = 'lhb2a7L7m2hFjdLKLxYy'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 # Application definition
 
 INSTALLED_APPS = [

@@ -9,6 +9,9 @@ from students.models import Students
 from teachers.models import Teachers
 from django.views.generic import TemplateView
 from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+from django.conf import settings
+
 
 # Create your views here.
 def home(request):
@@ -75,29 +78,6 @@ class Teacher(TemplateView):
         form = TeacherForm()
         return render(request, self.template_name, {'form' : form})
     
-    def send_email(request):
-        form = TeacherForm(request.POST)
-        first_name = request.POST.get('first_name')
-        last_name = request.POST.get('last_name')
-        date_of_birth = request.POST.get('date_of_birth')
-        qualifications = request.POST.get('qualifications')
-        email_address = request.POST.get('email_address')
-        phone_number = request.POST.get('phone_number')
-        facebook = request.POST.get('facebook')
-
-        def send_email(request):
-            subject = 'New Teacher'
-            message = 'Application'
-            from_email = request.POST.get('email_address')
-            if subject and message and email_address:
-                try:
-                    send_mail(subject, message, from_email, ['admin@admin.com'])
-                except BadHeaderError:
-                    return HttpResponse('Invalid header found.')
-                return HttpResponseRedirect('/contact/thanks/')
-            else:
-                return HttpResponse('Make sure all fields are entered and valid.')
-    
     def post(self,request):
         form = TeacherForm(request.POST)
         first_name = request.POST.get('first_name')
@@ -106,7 +86,16 @@ class Teacher(TemplateView):
         qualifications = request.POST.get('qualifications')
         email_address = request.POST.get('email_address')
         phone_number = request.POST.get('phone_number')
-        facebook = request.POST.get('facebook')        
+        facebook = request.POST.get('facebook')
+        
+        subject = 'New Teacher Applied'
+        message = (
+            'Teacher Application....' + first_name + '\n' + 
+            last_name + '\n' + email_address + '\n' +
+            phone_number +'\n' + qualifications)
+        from_email = settings.EMAIL_HOST_USER
+        to_email = [from_email, 'testdevelopmentuser1@gmail.com' ] 
+        send_mail(subject, message, from_email, to_email, fail_silently=False)        
 
         if form.is_valid():
             first_name = form.cleaned_data['first_name']
