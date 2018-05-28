@@ -3,8 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 
 class Teachers(models.Model):
-    #teacher = models.CharField(max_length=50) # change one to one when it works
-    teacher = models.OneToOneField(User, null=True)
+    teacher = models.CharField(max_length=50)
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     date_of_birth = models.DateField()
